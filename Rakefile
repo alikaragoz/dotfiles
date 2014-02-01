@@ -21,7 +21,7 @@ task :submodule_init do
 
   run %{
     cd $HOME/.dotfiles
-    git submodule update --recursive
+    git submodule update --init --recursive
     git clean -df
   }
   puts
