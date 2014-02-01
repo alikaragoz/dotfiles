@@ -50,7 +50,7 @@ task :install_prezto do
     run %{ ln -nfs "$HOME/.dotfiles/prezto" "${ZDOTDIR:-$HOME}/.zprezto" }
 
     # The prezto runcoms are only going to be installed if zprezto has never been installed
-    file_operation(Dir.glob('zsh/prezto/runcoms/z*'), :copy)
+    file_operation(Dir.glob('prezto/runcoms/z*'), :copy)
   end
 
   puts "Overriding prezto ~/.zpreztorc with Ai zpreztorc to enable additional modules."
