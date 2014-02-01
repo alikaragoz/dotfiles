@@ -1,0 +1,6 @@
+[submodule "prezto"]
+    path = zsh/prezto
+    url = https://github.com/sorin-ionescu/prezto.git
+[submodule "fasd"]
+    path = bin/fasd
+    url = https://github.com/clvv/fasd.git
