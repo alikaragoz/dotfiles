@@ -98,3 +98,24 @@ def run(cmd)
   puts "[Running] #{cmd}"
   `#{cmd}` unless ENV['DEBUG']
 end
+
+def file_operation(files, method = :symlink)
+  files.each do |f|
+    file = f.split('/').last
+    source = "#{ENV["PWD"]}/#{f}"
+    target = "#{ENV["HOME"]}/.#{file}"
+
+    puts "======================#{file}=============================="
+    puts "Source: #{source}"
+    puts "Target: #{target}"
+
+    if method == :symlink
+      run %{ ln -nfs "#{source}" "#{target}" }
+    else
+      run %{ cp -f "#{source}" "#{target}" }
+    end
+
+    puts "=========================================================="
+    puts
+  end
+end
