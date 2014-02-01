@@ -14,6 +14,7 @@ end
 
 # Submodules
 task :submodule_init do
+  puts
   puts "======================================================"
   puts "Downloading submodules."
   puts "======================================================"
@@ -28,6 +29,7 @@ end
 
 # Vundle
 task :install_vundle do
+  puts
   puts "======================================================"
   puts "Installing vundles."
   puts "======================================================"
@@ -42,6 +44,7 @@ end
 
 # Prezto
 task :install_prezto do
+  puts
   puts "======================================================"
   puts "Installing Prezto (ZSH Enhancements)."
   puts "======================================================"
@@ -50,7 +53,7 @@ task :install_prezto do
     run %{ ln -nfs "$HOME/.dotfiles/zsh/prezto" "${ZDOTDIR:-$HOME}/.zprezto" }
 
     # The prezto runcoms are only going to be installed if zprezto has never been installed
-    file_operation(Dir.glob('prezto/runcoms/z*'), :copy)
+    file_operation(Dir.glob('zsh/prezto/runcoms/z*'), :copy)
   end
 
   puts "Overriding some prezto configuration to enable additional modules."
@@ -76,23 +79,20 @@ end
 
 # Installation
 task :installation do
-  puts ""
-  puts "      ___                   "
-  puts "     /\  \                  "
-  puts "    /::\  \       ___       "
-  puts "   /:/\:\  \     /\__\      "
-  puts "  /:/ /::\  \   /:/__/      "
-  puts " /:/_/:/\:\__\ /::\  \      "
-  puts " \:\/:/  \/__/ \/\:\  \__   "
-  puts "  \::/__/       ~~\:\/\__\\ "
-  puts "   \:\  \          \::/  /  "
-  puts "    \:\__\         /:/  /   "
-  puts "     \/__/         \/__/    "
+  puts
+  puts "======================================================"
+  puts "Installing Ai dotfiles."
+  puts "======================================================"
+  puts
 end
 
 # Installed
 task :installed do
+  puts
+  puts "======================================================"
   puts "Please restart your terminal and vim."
+  puts "======================================================"
+  puts
 end
 
 private
