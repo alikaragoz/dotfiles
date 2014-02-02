@@ -6,10 +6,36 @@ task :default => 'install'
 # Global installation.
 task :install  do
   Rake::Task["installation"].execute
+  Rake::Task["install_homebrew"].execute
   Rake::Task["submodule_init"].execute
   Rake::Task["install_vundle"].execute
   Rake::Task["install_prezto"].execute
   Rake::Task["installed"].execute
+end
+
+task :install_homebrew do
+  run %{which brew}
+  unless $?.success?
+    puts
+    puts "======================================================"
+    puts "Installing Homebrew, the OSX package manager...If it's"
+    puts "already installed, this will do nothing."
+    puts "======================================================"
+    run %{ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"}
+  end
+
+  puts
+  puts "======================================================"
+  puts "Updating Homebrew."
+  puts "======================================================"
+  run %{brew update}
+  puts
+  puts "======================================================"
+  puts "Installing Homebrew packages...There may be some warnings."
+  puts "======================================================"
+  run %{brew install zsh git tmux the_silver_searcher rbenv ruby-build}
+  puts
+  puts
 end
 
 # Submodules
