@@ -10,6 +10,10 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+# Fasd
+export PATH="$HOME/.dotfiles/bin/fasd:$PATH"
+eval "$(fasd --init auto)"
+
 # RBENV
 RBENV_ROOT=/usr/local/var/rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
