@@ -60,10 +60,13 @@ task :install_vundle do
   puts "Installing vundles."
   puts "======================================================"
 
-  vundle_path = File.join('vim', 'vundle')
+  file_operation(Dir.glob('vim/vim*'), :copy)
+
+  vundle_path = File.join('vim', 'bundle', 'vundle')
   unless File.exists?(vundle_path)
     run %{
       git clone https://github.com/gmarik/vundle.git #{vundle_path}
+      vim +BundleInstall +qall
     }
   end
 end
