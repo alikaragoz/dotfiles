@@ -1,4 +1,4 @@
-# quickly open Xcode projects and workspaces
+# Quickly open Xcode projects and workspaces
 function xc {
     # get an array of .xcworkspace and .xcodeproj files
     workspaces=(`ls -d1 *.(xcworkspace|xcodeproj) | sed -e "s/\///g"`) &> /dev/null
