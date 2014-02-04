@@ -61,6 +61,7 @@ task :install_vundle do
   puts "======================================================"
 
   file_operation(Dir.glob('vim/vim*'), :copy)
+  run %{ ln -nfs "$HOME/.dotfiles/vim/vimrc" "$HOME/.vimrc" }
 
   vundle_path = File.join('vim', 'bundle', 'vundle')
   unless File.exists?(vundle_path)
