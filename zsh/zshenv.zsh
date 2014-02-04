@@ -18,3 +18,6 @@ eval "$(fasd --init auto)"
 RBENV_ROOT=/usr/local/var/rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Xcode opener
+export PATH="$HOME/.dotfiles/bin/xc:$PATH"

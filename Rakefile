@@ -107,6 +107,16 @@ task :install_prezto do
   end
 end
 
+# Xcode
+task :install_xcode do
+  puts
+  puts "======================================================"
+  puts "Installing Xcode."
+  puts "======================================================"
+
+  run %{ ln -nfs "$HOME/.dotfiles/xcode/lldbinit" "$HOME/.lldbinit" }
+end
+
 # Installation
 task :installation do
   puts
