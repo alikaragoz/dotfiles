@@ -4,9 +4,75 @@ filetype off
 set rtp+=~/.dotfiles/vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle
+" Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
+
+" Git support
 Bundle 'tpope/vim-fugitive'
+
+" Easy movement
 Bundle 'Lokaltog/vim-easymotion'
+
+" File navigator
 Bundle 'scrooloose/nerdtree'
-filetype plugin indent on
+
+" Tomorrow Night Theme
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+
+" Status line
+Bundle 'itchyny/lightline.vim'
+
+" =================== Theme  ========================
+colorscheme Tomorrow-Night
+syntax enable " Enable syntax highlighting
+set t_Co=256
+
+" ================ Indentation ======================
+
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set expandtab
+
+filetype plugin on
+filetype indent on
+
+" ==================== Misc =========================
+
+set number        " Show line numbers
+set cursorline    " Highlight current line
+set laststatus=2  " Always show the statusline
+set mouse=a       " Enable mouse
+set noswapfile    " No .swp files
+set autoread      " Detect whether a file has been changed from the outside
+set linebreak     " Break long lines
+set cindent       " Automatic indentation
+set showmatch     " Set show matching parenthesis
+set hlsearch      " Highlight search terms
+set incsearch     " Incremental search
+
+" Lightline configuration
+let g:lightline = {
+  \ 'colorscheme': 'solarized',
+  \ 'component': {
+  \   'readonly': '%{&readonly?"⭤":""}',
+  \ },
+  \ 'separator': { 'left': '⮀', 'right': '⮂' },
+  \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+  \ }
+
+" Map leader
+let g:mapleader = ","
+
+" NERDtree
+map <leader>n :NERDTreeToggle<CR>
+
+" Replaces arrows with pluses in nerdtree
+let g:NERDTreeDirArrows=0
+
+" Increases nerdtree sidebar size
+let g:NERDTreeWinSize=40
+
