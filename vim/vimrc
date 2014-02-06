@@ -16,6 +16,9 @@ Bundle 'Lokaltog/vim-easymotion'
 " File navigator
 Bundle 'scrooloose/nerdtree'
 
+" Easy commenting
+Bundle 'scrooloose/nerdcommenter'
+
 " Tomorrow Night Theme
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
