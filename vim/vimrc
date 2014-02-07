@@ -25,6 +25,9 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 " Status line
 Bundle 'itchyny/lightline.vim'
 
+" Mardown
+Bundle 'plasticboy/vim-markdown'
+
 " =================== Theme  ========================
 colorscheme Tomorrow-Night
 syntax enable " Enable syntax highlighting
@@ -79,3 +82,5 @@ let g:NERDTreeDirArrows=0
 " Increases nerdtree sidebar size
 let g:NERDTreeWinSize=40
 
+" Markdown disable folding
+let g:vim_markdown_folding_disabled=1
