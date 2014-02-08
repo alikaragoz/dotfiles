@@ -32,6 +32,8 @@ Bundle 'plasticboy/vim-markdown'
 colorscheme Tomorrow-Night
 syntax enable " Enable syntax highlighting
 set t_Co=256
+set background=dark
+
 
 " ================ Indentation ======================
 
