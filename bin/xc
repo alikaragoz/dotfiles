@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+directories = Dir.glob('*').select {
+  |f| File.directory? f
+}
+
+workspace = nil
+
+directories.each do |folder|
+  if folder.include? ".workspace"
+    workspace = folder
+    break
+  elsif folder.include? ".xcodeproj"
+    workspace = folder
+    break
+  end
+end
+
+if workspace != nil
+  print "Opening #{workspace}\n"
+  system %{open "#{workspace}"}
+else
+  print "No Xcode project found.\n"
+end
