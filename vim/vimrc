@@ -53,7 +53,6 @@ filetype indent on
 set number        " Show line numbers
 set cursorline    " Highlight current line
 set laststatus=2  " Always show the statusline
-set mouse=a       " Enable mouse
 set noswapfile    " No .swp files
 set autoread      " Detect whether a file has been changed from the outside
 set linebreak     " Break long lines
@@ -86,3 +85,4 @@ let g:NERDTreeWinSize=40
 
 " Markdown disable folding
 let g:vim_markdown_folding_disabled=1
+
