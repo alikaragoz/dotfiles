@@ -7,7 +7,7 @@ directories = Dir.glob('*').select {
 workspace = nil
 
 directories.each do |folder|
-  if folder.include? ".workspace"
+  if folder.include? ".xcworkspace"
     workspace = folder
     break
   elsif folder.include? ".xcodeproj"
