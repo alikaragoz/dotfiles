@@ -19,19 +19,12 @@ Bundle 'scrooloose/nerdtree'
 " Easy commenting
 Bundle 'scrooloose/nerdcommenter'
 
-" Tomorrow Night Theme
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-
-" Status line
-Bundle 'itchyny/lightline.vim'
-
-" Mardown
-Bundle 'plasticboy/vim-markdown'
+" Base 16 Theme
+Bundle 'chriskempson/base16-vim'
 
 " =================== Theme  ========================
-colorscheme Tomorrow-Night
+colorscheme base16-ocean 
 syntax enable " Enable syntax highlighting
-set t_Co=256
 set background=dark
 
 
@@ -60,16 +53,6 @@ set cindent       " Automatic indentation
 set showmatch     " Set show matching parenthesis
 set hlsearch      " Highlight search terms
 set incsearch     " Incremental search
-
-" Lightline configuration
-let g:lightline = {
-  \ 'colorscheme': 'solarized',
-  \ 'component': {
-  \   'readonly': '%{&readonly?"⭤":""}',
-  \ },
-  \ 'separator': { 'left': '⮀', 'right': '⮂' },
-  \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-  \ }
 
 " Map leader
 let g:mapleader = ","
