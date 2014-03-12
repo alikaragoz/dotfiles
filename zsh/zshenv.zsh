@@ -20,5 +20,5 @@ eval "$(fasd --init auto)"
 # RBENV
 RBENV_ROOT=/usr/local/var/rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
