@@ -10,6 +10,7 @@ task :install  do
   Rake::Task["submodule_init"].execute
   Rake::Task["install_vundle"].execute
   Rake::Task["install_prezto"].execute
+  Rale::Task["install_xcode"].execute
   Rake::Task["installed"].execute
 end
 
