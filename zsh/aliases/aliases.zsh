@@ -4,5 +4,8 @@ alias pk='pkill -9 -f '
 # History Grep
 alias hg='history | grep'
 
+# List grep
+alias lsa='ls -lath | ack -i'
+
 # Sublime
 alias mate='subl -w'
