@@ -2,7 +2,7 @@
 alias pk='pkill -9 -f '
 
 # History Grep
-alias hg='history | grep'
+alias ha='history | ack -i'
 
 # List grep
 alias lsa='ls -lath | ack -i'
