@@ -34,7 +34,7 @@ task :install_homebrew do
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install zsh git tmux the_silver_searcher rbenv ruby-build}
+  run %{brew install zsh ack git tmux rbenv ruby-build}
   puts
   puts
 end
